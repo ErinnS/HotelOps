@@ -16,19 +16,33 @@ public class Room {
         this.available = available;
     }
     public int getNumberOfBeds() {
-        return numberOfBeds;
+        return this.numberOfBeds;
     }
     public double getPrice() {
-        return price;
+        return this.price;
     }
     public boolean isOccupied() {
-        return occupied;
+        return this.occupied;
     }
     public boolean isDirty() {
-        return dirty;
+        return this.dirty;
     }
     public boolean isAvailable() {
-        return available;
+        return this.available;
     }
+    public void checkIn(){
+        occupied = true;
+        dirty = true;
+    }
+    public void checkOut(){
+        occupied = false;
+        dirty = false;
+    }
+    public void cleanRoom() {
+       dirty = false;
+
+    }
+
+
 
 }
